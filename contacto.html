@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quejas y Recomendaciones - CINEPOLIS</title>
+    <link rel="icon"  type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles/css-contact.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="estrenos.html">Próximos Estrenos</a></li>
+            <li><a href="cartelera.html">Cartelera</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Quejas y Recomendaciones</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Déjanos tu opinión</h2>
+            <form id="feedbackForm">
+                <label for="name">Tu Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+
+                <label for="email">Tu Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Tu Correo Electrónico" required>
+
+                <label for="category">Categoría</label>
+                <select style="margin-bottom: 20px" id="category" name="category" required>
+                    <option value="queja">Queja</option>
+                    <option value="recomendacion">Recomendación</option>
+                </select>
+
+                <label for="message">Tu Mensaje</label>
+                <textarea id="message" name="message" placeholder="Escribe tu queja o recomendación aquí..." required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 CINEPOLIS. <a href="index.html">Volver al inicio</a></p>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEPOLIS</title>
+    <link rel="icon"  type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles/css-cartelera.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="estrenos.html">Próximos Estrenos</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>CARTELERA</h1>
+    </header>
+    
+    <div class="gallery" id="gallery">
+        <!-- Las películas se cargarán aquí dinámicamente -->
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p><strong>Año:</strong> <span id="popup-year"></span></p>
+            <p><strong>Descripción:</strong> <span id="popup-description"></span></p>
+            <p><strong>Categoría:</strong> <span id="popup-category"></span></p>
+            <video id="popup-trailer" width="100%" controls></video>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 CINEPOLIS. Designed by David Lopez. <a href="contacto.html">¿Tienes algun problema? Contactanos!</a></p>
+    </footer>
+
+    <script src="js/cartelera.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y tipografía global */
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-image: url('https://image.tmdb.org/t/p/w1280/dQJ9D0fA2gLMnJjQ8YflSxCk5lX.jpg'); /* Fondo de película */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilos para el menú desplegable */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e50914; /* Rojo Netflix */
+}
+
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+nav .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav .dropdown:hover .dropbtn {
+    background-color: #444;
+}
+
+/* Sección de bienvenida */
+.welcome {
+    text-align: center;
+    margin-top: 120px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para el texto */
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.welcome .button {
+    background-color: #e50914;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.welcome .button:hover {
+    background-color: #b00712;
+}
+
+/* Galería de imágenes */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.image-gallery img {
+    width: 150px;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Pie de página */
+footer {
+    background-color: #141414;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.more-button {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #e50914; /* Rojo de Cinepolis */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.more-button:hover {
+    color: #b00712; /* Rojo más oscuro al hacer hover */
+}
