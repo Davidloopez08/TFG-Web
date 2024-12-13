@@ -2,15 +2,14 @@ const gallery = document.getElementById('gallery');
         const popup = document.getElementById('popup');
         const closePopupBtn = document.getElementById('close-popup');
 
-        // Cargar las películas desde el archivo JSON
         function loadMovies() {
-            fetch('http://localhost:3000/peliculas')  // Ruta del archivo JSON
+            fetch('http://localhost:3000/peliculas')
                 .then(response => response.json())
                 .then(peliculas => {
-                    // Mostrar las películas en la galería
+
                     renderMovies(peliculas);
                     
-                    // Añadir el evento de clic en las películas
+
                     gallery.addEventListener('click', event => {
                         const movieId = event.target.closest('.gallery-item')?.dataset.id;
                         if (movieId) {
@@ -26,7 +25,7 @@ const gallery = document.getElementById('gallery');
                 });
         }
 
-        // Mostrar las películas en la galería
+
         function renderMovies(peliculas) {
             gallery.innerHTML = peliculas.map(pelicula => `
                 <div class="gallery-item" data-id="${pelicula.id}">
@@ -36,7 +35,6 @@ const gallery = document.getElementById('gallery');
             `).join('');
         }
 
-        // Mostrar el pop-up con la información de la película
         function showPopup(pelicula) {
             document.getElementById('popup-title').textContent = pelicula.title;
             document.getElementById('popup-year').textContent = pelicula.year;
@@ -46,11 +44,9 @@ const gallery = document.getElementById('gallery');
             popup.style.display = 'flex';
         }
 
-        // Cerrar el pop-up
         closePopupBtn.addEventListener('click', () => {
             popup.style.display = 'none';
             document.getElementById('popup-trailer').pause();
         });
 
-        // Inicializar la carga de películas
         loadMovies();

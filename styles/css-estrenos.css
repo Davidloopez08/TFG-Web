@@ -206,10 +206,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e50914; /* Rojo Netflix */
+    color: #e50914;
 }
 
 img {
-    width: 100%;  /* O un valor específico como 300px */
+    width: 100%;
     height: auto;
   }
