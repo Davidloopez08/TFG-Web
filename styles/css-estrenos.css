@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Fondo y estilo general */
+/* Estilo general */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -17,8 +17,10 @@ body {
     padding: 20px;
 }
 
-/* Estilo para el encabezado */
+/* Encabezado */
 header {
+    margin-top: 50px;
+    margin-bottom: 20px;
     text-align: center;
     padding: 20px 0;
 }
@@ -28,86 +30,51 @@ header h1 {
     font-size: 2.5rem;
 }
 
-/* Contenedor de las películas */
-.movie-container {
+/* Contenedor de las tarjetas */
+.gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Diseño responsivo */
     gap: 15px;
     width: 100%;
     max-width: 1200px;
     padding: 0 20px;
 }
 
-/* Estilos de las tarjetas de las películas */
-.movie-card {
+/* Estilos de las tarjetas */
+.gallery-item {
     position: relative;
     overflow: hidden;
     border: 2px solid red;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
-    background-color: #222; /* Fondo oscuro para que resalten las imágenes */
-    display: flex;
-    flex-direction: column; /* Asegúrate de que el contenido se apile verticalmente */
-    height: 100%;
 }
 
-/* Efecto de hover en las tarjetas */
-.movie-card:hover {
-    transform: scale(1.05);
-}
-
-/* Imagen de la película */
-.movie-card img {
+.gallery-item img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 300px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
     transition: transform 0.3s ease;
 }
 
-/* Efecto hover en la imagen */
-.movie-card:hover img {
+.gallery-item:hover img {
     transform: scale(1.1);
 }
 
-/* Información de la película */
-.movie-info {
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+/* Título en la tarjeta */
+.gallery-item .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
     color: white;
+    padding: 10px;
     text-align: center;
-    flex-grow: 1; /* Hace que la sección de info ocupe el resto del espacio disponible */
-}
-
-/* Estilo de los títulos */
-.movie-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: red; /* Color de texto del título */
-}
-
-/* Estilo de las descripciones */
-.movie-info p {
     font-size: 1rem;
-    margin-bottom: 15px;
-    color: #ddd; /* Color de texto de la descripción */
 }
 
-/* Estilo de los enlaces */
-.movie-info a {
-    font-size: 1.1rem;
-    color: red;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.movie-info a:hover {
-    color: #ff4d4d;
-    text-decoration: underline;
-}
-
-/* Popup para el trailer */
+/* Popup para detalles adicionales */
 .popup {
     position: fixed;
     top: 0;
@@ -159,25 +126,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    .movie-container {
-        padding: 0 10px;
-    }
-
-    .movie-card img {
-        height: 250px;
-    }
-
-    .movie-info h3 {
-        font-size: 1rem;
-    }
-}
-
+/* Barra de navegación */
 nav {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 15px;
@@ -209,7 +158,17 @@ nav ul li a:hover {
     color: #e50914;
 }
 
-img {
-    width: 100%;
-    height: auto;
-  }
+/* Responsividad */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .gallery-item img {
+        height: 200px; /* Reduce la altura de las imágenes en pantallas más pequeñas */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}

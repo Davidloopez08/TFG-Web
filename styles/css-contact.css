@@ -1,99 +1,24 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+/* Reset de márgenes y padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    color: #e60000;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    margin-top: 75px;
-    font-size: 2rem;
-}
-
-.container {
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
     padding: 20px;
+    min-height: 100vh;
 }
 
-.form-container {
-    background-color: white;
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.form-container h2 {
-    font-size: 1.8rem;
-    color: #e60000; /* Rojo */
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-input:focus, textarea:focus {
-    border-color: #e60000; /* Rojo */
-    outline: none;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-button {
-    background-color: #e60000;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #cc0000;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #e60000;
-    color: white;
-    font-size: 0.9rem;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
+/* Barra de navegación */
 nav {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 15px;
@@ -123,4 +48,122 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #e50914;
+}
+
+/* Encabezado */
+header {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: red;
+    font-size: 2.5rem;
+}
+
+/* Contenedor del formulario */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* Título del formulario */
+.form-container h2 {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Estilos para los labels */
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: white;
+    text-align: left;
+}
+
+/* Estilos para los inputs y textarea */
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #222;
+    color: white;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    outline: none;
+    border-color: red;
+}
+
+/* Botón de envío */
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #e50914;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: red;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.3rem;
+    }
 }
